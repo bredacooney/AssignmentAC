@@ -51,10 +51,10 @@
             this.frmDate = new System.Windows.Forms.TextBox();
             this.frmRental = new System.Windows.Forms.NumericUpDown();
             this.frmAvailable = new System.Windows.Forms.CheckBox();
-            this.UpdatePanel = new System.Windows.Forms.Panel();
+            this.updatePanel = new System.Windows.Forms.Panel();
             this.recordCount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.frmRental)).BeginInit();
-            this.UpdatePanel.SuspendLayout();
+            this.updatePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -296,15 +296,15 @@
             this.frmAvailable.TabIndex = 22;
             this.frmAvailable.UseVisualStyleBackColor = true;
             // 
-            // UpdatePanel
+            // updatePanel
             // 
-            this.UpdatePanel.BackColor = System.Drawing.Color.Transparent;
-            this.UpdatePanel.Controls.Add(this.frmVecRegLabel);
-            this.UpdatePanel.Controls.Add(this.frmAvailable);
-            this.UpdatePanel.Location = new System.Drawing.Point(12, 86);
-            this.UpdatePanel.Name = "UpdatePanel";
-            this.UpdatePanel.Size = new System.Drawing.Size(739, 310);
-            this.UpdatePanel.TabIndex = 23;
+            this.updatePanel.BackColor = System.Drawing.Color.Transparent;
+            this.updatePanel.Controls.Add(this.frmVecRegLabel);
+            this.updatePanel.Controls.Add(this.frmAvailable);
+            this.updatePanel.Location = new System.Drawing.Point(12, 86);
+            this.updatePanel.Name = "updatePanel";
+            this.updatePanel.Size = new System.Drawing.Size(739, 310);
+            this.updatePanel.TabIndex = 23;
             // 
             // recordCount
             // 
@@ -341,13 +341,13 @@
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.UpdatePanel);
+            this.Controls.Add(this.updatePanel);
             this.Name = "frmCar";
             this.Text = "Task A Breda Cooney";
             this.Load += new System.EventHandler(this.frmCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.frmRental)).EndInit();
-            this.UpdatePanel.ResumeLayout(false);
-            this.UpdatePanel.PerformLayout();
+            this.updatePanel.ResumeLayout(false);
+            this.updatePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,7 +378,7 @@
         private System.Windows.Forms.TextBox frmDate;
         private System.Windows.Forms.NumericUpDown frmRental;
         private System.Windows.Forms.CheckBox frmAvailable;
-        private System.Windows.Forms.Panel UpdatePanel;
+        private System.Windows.Forms.Panel updatePanel;
         private System.Windows.Forms.TextBox recordCount;
     }
 }

@@ -55,6 +55,7 @@
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -65,6 +66,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -75,6 +77,7 @@
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmVecRegLabel
             // 
@@ -136,6 +139,7 @@
             this.frmVehicleReg.Name = "frmVehicleReg";
             this.frmVehicleReg.Size = new System.Drawing.Size(100, 26);
             this.frmVehicleReg.TabIndex = 9;
+            this.frmVehicleReg.TextChanged += new System.EventHandler(this.frmVehicleReg_TextChanged);
             // 
             // frmMake
             // 
@@ -143,6 +147,7 @@
             this.frmMake.Name = "frmMake";
             this.frmMake.Size = new System.Drawing.Size(100, 26);
             this.frmMake.TabIndex = 10;
+            this.frmMake.TextChanged += new System.EventHandler(this.frmMake_TextChanged);
             // 
             // frmEngine
             // 
@@ -150,6 +155,7 @@
             this.frmEngine.Name = "frmEngine";
             this.frmEngine.Size = new System.Drawing.Size(100, 26);
             this.frmEngine.TabIndex = 11;
+            this.frmEngine.TextChanged += new System.EventHandler(this.frmEngine_TextChanged);
             // 
             // frmDate
             // 
@@ -157,6 +163,7 @@
             this.frmDate.Name = "frmDate";
             this.frmDate.Size = new System.Drawing.Size(100, 26);
             this.frmDate.TabIndex = 12;
+            this.frmDate.TextChanged += new System.EventHandler(this.frmDate_TextChanged);
             // 
             // frmRental
             // 
@@ -164,6 +171,7 @@
             this.frmRental.Name = "frmRental";
             this.frmRental.Size = new System.Drawing.Size(120, 26);
             this.frmRental.TabIndex = 13;
+            this.frmRental.ValueChanged += new System.EventHandler(this.frmRental_ValueChanged);
             // 
             // frmAvailable
             // 
@@ -173,6 +181,7 @@
             this.frmAvailable.Size = new System.Drawing.Size(22, 21);
             this.frmAvailable.TabIndex = 14;
             this.frmAvailable.UseVisualStyleBackColor = true;
+            this.frmAvailable.CheckedChanged += new System.EventHandler(this.frmAvailable_CheckedChanged);
             // 
             // frmAdd
             // 
@@ -196,6 +205,7 @@
             this.Controls.Add(this.btnClear);
             this.Name = "frmAdd";
             this.Text = "Task A Add Breda Cooney";
+            this.Load += new System.EventHandler(this.frmAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.frmRental)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

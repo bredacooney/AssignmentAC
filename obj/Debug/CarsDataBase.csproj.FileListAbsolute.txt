@@ -1,0 +1,8 @@
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.csproj.AssemblyReference.cache
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.csproj.SuggestedBindingRedirects.cache
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.frmAdd.resources
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.frmCar.resources
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.frmSearch.resources
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.Properties.Resources.resources
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.csproj.GenerateResource.cache
+C:\Users\coone\Desktop\AssignementAC\CarsDataBase\CarsDataBase\obj\Debug\CarsDataBase.csproj.CoreCompileInputs.cache

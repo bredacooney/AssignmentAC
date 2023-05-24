@@ -32,7 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.cboField = new System.Windows.Forms.ComboBox();
             this.cboOperator = new System.Windows.Forms.ComboBox();
-            this.frmValue = new System.Windows.Forms.TextBox();
+            this.valueTextbox = new System.Windows.Forms.TextBox();
             this.frmFieldLabel = new System.Windows.Forms.Label();
             this.frmOperatorLabel = new System.Windows.Forms.Label();
             this.frmValueLabel = new System.Windows.Forms.Label();
@@ -78,12 +78,12 @@
             this.cboOperator.Size = new System.Drawing.Size(121, 28);
             this.cboOperator.TabIndex = 3;
             // 
-            // frmValue
+            // valueTextbox
             // 
-            this.frmValue.Location = new System.Drawing.Point(446, 151);
-            this.frmValue.Name = "frmValue";
-            this.frmValue.Size = new System.Drawing.Size(100, 26);
-            this.frmValue.TabIndex = 4;
+            this.valueTextbox.Location = new System.Drawing.Point(446, 151);
+            this.valueTextbox.Name = "valueTextbox";
+            this.valueTextbox.Size = new System.Drawing.Size(100, 26);
+            this.valueTextbox.TabIndex = 4;
             // 
             // frmFieldLabel
             // 
@@ -142,7 +142,7 @@
             this.Controls.Add(this.frmValueLabel);
             this.Controls.Add(this.frmOperatorLabel);
             this.Controls.Add(this.frmFieldLabel);
-            this.Controls.Add(this.frmValue);
+            this.Controls.Add(this.valueTextbox);
             this.Controls.Add(this.cboOperator);
             this.Controls.Add(this.cboField);
             this.Controls.Add(this.btnClose);
@@ -150,6 +150,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmSearch";
             this.Text = "frmSearch";
+            this.Load += new System.EventHandler(this.frmSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,7 +163,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cboField;
         private System.Windows.Forms.ComboBox cboOperator;
-        private System.Windows.Forms.TextBox frmValue;
+        private System.Windows.Forms.TextBox valueTextbox;
         private System.Windows.Forms.Label frmFieldLabel;
         private System.Windows.Forms.Label frmOperatorLabel;
         private System.Windows.Forms.Label frmValueLabel;
