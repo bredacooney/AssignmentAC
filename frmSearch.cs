@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Data.SqlClient;
 
 namespace CarsDataBase
 {
     public partial class frmSearch : Form
     {
+        SQLiteConnection databaseConnection = new SQLiteConnection(@"data source = c:\data\hire,db");  // connects to the Databas
         public frmSearch()
         {
             InitializeComponent();
@@ -92,9 +94,63 @@ namespace CarsDataBase
 
 
                 // OPENING DB AND SEARCHING PARAMATERS
+                SQLiteConnection connect = new SQLiteConnection(@"data source = C:\data\hire.db");
+                connect.Open();
+                string Query = findData;
+                SQLiteCommand cmd = new SQLiteCommand(Query, connect);
+                DataTable dt = new DataTable();
+                SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(cmd);
+                adapter2.Fill(dt);
+                frmDataGrid.DataSource = dt;
+                connect.Close();
 
 
 
+            }
+
+        }
+
+        private void frmDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cboOperator_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void displayDB()
+        {
+
+        }
+
+        private void cboField_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            removeOrAddOperators();
+        }
+
+        private void removeOrAddOperators()
+        {
+            // ADDS OR REMOVES OPERATOR FROM THE FORM DEPENDING ON FIELD SELECTION
+            if (cboField.Text == "Available " || cboField.Text == "Vehicle Registration Number" | cboField.Text == "Make")
+            {
+                cboOperator.Items.Remove("<");
+                cboOperator.Items.Remove(">");
+                cboOperator.Items.Remove("<=");
+                cboOperator.Items.Remove(">=");
+            }
+            if ((cboField.Text == "Engine Size" || cboField.Text == "Rental Per Day") && !cboField.Items.Contains("<") && !cboOperator.Items.Contains(">" ) && !cboOperator.Items.Contains("<=") && !cboOperator.Items.Contains(">="))
+            {
+                cboOperator.Items.Add("<");
+                cboOperator.Items.Add(">");
+                cboOperator.Items.Add("<=");
+                cboOperator.Items.Add(">=");
             }
 
         }

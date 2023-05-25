@@ -37,8 +37,8 @@
             this.frmOperatorLabel = new System.Windows.Forms.Label();
             this.frmValueLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.frmDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.frmDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRun
@@ -50,6 +50,7 @@
             this.btnRun.TabIndex = 0;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnClose
             // 
@@ -69,6 +70,7 @@
             this.cboField.Name = "cboField";
             this.cboField.Size = new System.Drawing.Size(121, 28);
             this.cboField.TabIndex = 2;
+            this.cboField.SelectedIndexChanged += new System.EventHandler(this.cboField_SelectedIndexChanged);
             // 
             // cboOperator
             // 
@@ -77,6 +79,7 @@
             this.cboOperator.Name = "cboOperator";
             this.cboOperator.Size = new System.Drawing.Size(121, 28);
             this.cboOperator.TabIndex = 3;
+            this.cboOperator.SelectedIndexChanged += new System.EventHandler(this.cboOperator_SelectedIndexChanged);
             // 
             // valueTextbox
             // 
@@ -122,15 +125,16 @@
             this.panel1.Size = new System.Drawing.Size(638, 154);
             this.panel1.TabIndex = 8;
             // 
-            // dataGridView1
+            // frmDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 200);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 190);
-            this.dataGridView1.TabIndex = 9;
+            this.frmDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.frmDataGrid.Location = new System.Drawing.Point(13, 200);
+            this.frmDataGrid.Name = "frmDataGrid";
+            this.frmDataGrid.RowHeadersWidth = 62;
+            this.frmDataGrid.RowTemplate.Height = 28;
+            this.frmDataGrid.Size = new System.Drawing.Size(747, 190);
+            this.frmDataGrid.TabIndex = 9;
+            this.frmDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.frmDataGrid_CellContentClick);
             // 
             // frmSearch
             // 
@@ -138,7 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.frmDataGrid);
             this.Controls.Add(this.frmValueLabel);
             this.Controls.Add(this.frmOperatorLabel);
             this.Controls.Add(this.frmFieldLabel);
@@ -151,7 +155,7 @@
             this.Name = "frmSearch";
             this.Text = "frmSearch";
             this.Load += new System.EventHandler(this.frmSearch_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +172,6 @@
         private System.Windows.Forms.Label frmOperatorLabel;
         private System.Windows.Forms.Label frmValueLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView frmDataGrid;
     }
 }

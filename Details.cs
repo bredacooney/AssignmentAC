@@ -17,8 +17,8 @@ namespace CarsDataBase
         int available;
         string sAvailable;
 
-        public string VehicleReg;
-        {
+        public string VehicleReg { 
+        
             get { return vehicleReg; }
             set { vehicleReg = value; } 
         }
