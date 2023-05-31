@@ -14,7 +14,7 @@ namespace CarsDataBase
 {
     public partial class frmSearch : Form
     {
-        SQLiteConnection databaseConnection = new SQLiteConnection(@"data source = c:\data\hire,db");  // connects to the Databas
+       // SQLiteConnection databaseConnection = new SQLiteConnection(@"data source = c:\data\hire,db");  // connects to the Databas
         public frmSearch()
         {
             InitializeComponent();
@@ -122,6 +122,7 @@ namespace CarsDataBase
 
         private void btnRun_Click(object sender, EventArgs e)
         {
+            searchData();
 
         }
 
@@ -138,7 +139,7 @@ namespace CarsDataBase
         private void removeOrAddOperators()
         {
             // ADDS OR REMOVES OPERATOR FROM THE FORM DEPENDING ON FIELD SELECTION
-            if (cboField.Text == "Available " || cboField.Text == "Vehicle Registration Number" | cboField.Text == "Make")
+            if (cboField.Text == "Available " || cboField.Text == "Vehicle Registration Number" || cboField.Text == "Make")
             {
                 cboOperator.Items.Remove("<");
                 cboOperator.Items.Remove(">");

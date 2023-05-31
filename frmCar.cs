@@ -63,13 +63,13 @@ namespace CarsDataBase
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            recordCounter("Next"); // go to next position
+            recordCounter("next"); // go to next position
             getData(); // get data of current position
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            recordCounter("Last"); // go to last position
+            recordCounter("last"); // go to last position
             getData(); // get data of current position
         }
 
@@ -157,12 +157,12 @@ namespace CarsDataBase
             try
             {// RETURNS DATA BASED ON SELECTED RECORD.
                 databaseConnection.Open();  // open connection
-                string getDB = $@"SELECT * FROM (SELECT * from tblCar LIMIT 1 OFFSET {rowPosition}";  // SQL query to get data from database
+                string getDB = $@"SELECT * FROM (SELECT * from tblCar LIMIT 1 OFFSET {rowPosition})";  // SQL query to get data from database
                 SQLiteCommand cmd = new SQLiteCommand(getDB, databaseConnection);  // declaring dt as a new datatable
                 DataTable dt = new DataTable(); // declaring dt as a new datatable
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd); // adapter for collecting data from the database
                 adapter.Fill(dt); // filling dt with data from adapter
-                                  //frmDataGrid.DataSource = dt;  // filling datagrid with data
+                frmDataGrid.DataSource = dt;  //frmDataGrid.DataSource = dt;  // filling datagrid with data
                 databaseConnection.Close();  // closing connection to database
 
                 // making text fields in form equal to specific data search in datatable
@@ -273,7 +273,7 @@ namespace CarsDataBase
             {//DELETED CURRENT DISPLAYED DATA FROM DATABASE
                 try
                 {
-                    string deleteRecord = $@"DELETE FROM FblCar WHERE VehicleRegNo = '{frmVehicleReg.Text}'";
+                    string deleteRecord = $@"DELETE FROM tblCar WHERE VehicleRegNo = '{frmVehicleReg.Text}'";
 
                     databaseConnection.Open();
                     string sendData2 = deleteRecord;
@@ -333,6 +333,11 @@ namespace CarsDataBase
             btnUpdate.Enabled = true;
             btnCancel.Enabled = true;
             updatePanel.Visible = true;
+        }
+
+        private void frmAvailable_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }   

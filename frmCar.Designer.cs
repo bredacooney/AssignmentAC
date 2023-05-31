@@ -53,15 +53,16 @@
             this.frmAvailable = new System.Windows.Forms.CheckBox();
             this.updatePanel = new System.Windows.Forms.Panel();
             this.recordCount = new System.Windows.Forms.TextBox();
+            this.frmDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.frmRental)).BeginInit();
-            this.updatePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frmDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(787, 33);
+            this.btnUpdate.Location = new System.Drawing.Point(818, 43);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(123, 53);
             this.btnUpdate.TabIndex = 0;
@@ -73,9 +74,9 @@
             // 
             this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLast.ForeColor = System.Drawing.Color.Black;
-            this.btnLast.Location = new System.Drawing.Point(674, 440);
+            this.btnLast.Location = new System.Drawing.Point(666, 440);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(123, 53);
+            this.btnLast.Size = new System.Drawing.Size(132, 53);
             this.btnLast.TabIndex = 1;
             this.btnLast.Text = "Last";
             this.btnLast.UseVisualStyleBackColor = true;
@@ -85,9 +86,9 @@
             // 
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.Location = new System.Drawing.Point(495, 440);
+            this.btnNext.Location = new System.Drawing.Point(510, 440);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(123, 53);
+            this.btnNext.Size = new System.Drawing.Size(132, 53);
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -97,9 +98,9 @@
             // 
             this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.Black;
-            this.btnPrevious.Location = new System.Drawing.Point(157, 440);
+            this.btnPrevious.Location = new System.Drawing.Point(170, 440);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(123, 53);
+            this.btnPrevious.Size = new System.Drawing.Size(132, 53);
             this.btnPrevious.TabIndex = 3;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@
             this.btnFirst.ForeColor = System.Drawing.Color.Black;
             this.btnFirst.Location = new System.Drawing.Point(12, 440);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(123, 53);
+            this.btnFirst.Size = new System.Drawing.Size(132, 53);
             this.btnFirst.TabIndex = 4;
             this.btnFirst.Text = "First";
             this.btnFirst.UseVisualStyleBackColor = true;
@@ -121,7 +122,7 @@
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(787, 329);
+            this.btnExit.Location = new System.Drawing.Point(818, 386);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(123, 53);
             this.btnExit.TabIndex = 5;
@@ -133,7 +134,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(787, 270);
+            this.btnCancel.Location = new System.Drawing.Point(818, 317);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 53);
             this.btnCancel.TabIndex = 6;
@@ -145,7 +146,7 @@
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(787, 211);
+            this.btnSearch.Location = new System.Drawing.Point(818, 248);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(123, 53);
             this.btnSearch.TabIndex = 7;
@@ -157,7 +158,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(787, 151);
+            this.btnDelete.Location = new System.Drawing.Point(818, 178);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(123, 53);
             this.btnDelete.TabIndex = 8;
@@ -169,7 +170,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(787, 92);
+            this.btnAdd.Location = new System.Drawing.Point(818, 109);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(123, 53);
             this.btnAdd.TabIndex = 9;
@@ -191,7 +192,7 @@
             // 
             this.frmVecRegLabel.AutoSize = true;
             this.frmVecRegLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frmVecRegLabel.Location = new System.Drawing.Point(19, 44);
+            this.frmVecRegLabel.Location = new System.Drawing.Point(31, 132);
             this.frmVecRegLabel.Name = "frmVecRegLabel";
             this.frmVecRegLabel.Size = new System.Drawing.Size(258, 25);
             this.frmVecRegLabel.TabIndex = 11;
@@ -290,35 +291,48 @@
             // frmAvailable
             // 
             this.frmAvailable.AutoSize = true;
-            this.frmAvailable.Location = new System.Drawing.Point(333, 243);
+            this.frmAvailable.Location = new System.Drawing.Point(345, 334);
             this.frmAvailable.Name = "frmAvailable";
             this.frmAvailable.Size = new System.Drawing.Size(22, 21);
             this.frmAvailable.TabIndex = 22;
             this.frmAvailable.UseVisualStyleBackColor = true;
+            this.frmAvailable.CheckedChanged += new System.EventHandler(this.frmAvailable_CheckedChanged);
             // 
             // updatePanel
             // 
             this.updatePanel.BackColor = System.Drawing.Color.Transparent;
-            this.updatePanel.Controls.Add(this.frmVecRegLabel);
-            this.updatePanel.Controls.Add(this.frmAvailable);
-            this.updatePanel.Location = new System.Drawing.Point(12, 86);
+            this.updatePanel.Location = new System.Drawing.Point(12, 99);
             this.updatePanel.Name = "updatePanel";
-            this.updatePanel.Size = new System.Drawing.Size(739, 310);
+            this.updatePanel.Size = new System.Drawing.Size(755, 302);
             this.updatePanel.TabIndex = 23;
             // 
             // recordCount
             // 
-            this.recordCount.Location = new System.Drawing.Point(311, 456);
+            this.recordCount.Location = new System.Drawing.Point(324, 456);
             this.recordCount.Name = "recordCount";
             this.recordCount.Size = new System.Drawing.Size(154, 26);
             this.recordCount.TabIndex = 24;
             this.recordCount.TextChanged += new System.EventHandler(this.recordCount_TextChanged);
             // 
+            // frmDataGrid
+            // 
+            this.frmDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.frmDataGrid.Location = new System.Drawing.Point(984, 482);
+            this.frmDataGrid.Name = "frmDataGrid";
+            this.frmDataGrid.RowHeadersWidth = 62;
+            this.frmDataGrid.RowTemplate.Height = 28;
+            this.frmDataGrid.Size = new System.Drawing.Size(240, 150);
+            this.frmDataGrid.TabIndex = 25;
+            // 
             // frmCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 535);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(969, 560);
+            this.Controls.Add(this.frmAvailable);
+            this.Controls.Add(this.frmVecRegLabel);
+            this.Controls.Add(this.frmDataGrid);
             this.Controls.Add(this.recordCount);
             this.Controls.Add(this.frmRental);
             this.Controls.Add(this.frmDate);
@@ -346,8 +360,7 @@
             this.Text = "Task A Breda Cooney";
             this.Load += new System.EventHandler(this.frmCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.frmRental)).EndInit();
-            this.updatePanel.ResumeLayout(false);
-            this.updatePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frmDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +393,7 @@
         private System.Windows.Forms.CheckBox frmAvailable;
         private System.Windows.Forms.Panel updatePanel;
         private System.Windows.Forms.TextBox recordCount;
+        private System.Windows.Forms.DataGridView frmDataGrid;
     }
 }
 
